@@ -10,8 +10,8 @@
 //By importing SwiftUI we get Foundation inside of it so dont need to import Foundation
 import SwiftUI
 
-class EmojiMemoryGame{
-    private(set) var model:MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+class EmojiMemoryGame:ObservableObject{
+     @Published private var model:MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     static func createMemoryGame() -> MemoryGame<String>{
         let emojis = ["🌏","🔥"]
